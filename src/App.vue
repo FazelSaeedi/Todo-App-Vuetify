@@ -1,6 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer
+        right
     v-model="drawer" app>
       <v-list-item>
         <v-list-item-content>
@@ -42,6 +43,8 @@
         dark
         src="https://picsum.photos/1920/1080?random"
         prominent
+        hide-on-scroll
+
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -50,13 +53,13 @@
         ></v-img>
       </template>
 
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon  @click="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-app-bar-title>Vuetify Todo</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
-      <v-btn icon>
+      <v-btn icon >
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
